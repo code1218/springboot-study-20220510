@@ -5,8 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>게시글 목록</title>
-<link rel="stylesheet" href="/css/board/board-list.css">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
 	<div id="container">
@@ -37,6 +35,5 @@
 		
 	</div>
 	
-	<script type="text/javascript" src="/js/board-list.js"></script>
 </body>
 </html>

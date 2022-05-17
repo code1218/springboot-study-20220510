@@ -13,6 +13,6 @@ public class PageController {
 	
 	@GetMapping("/board")
 	public String boardList() {
-		return "board/board-list";
+		return "board/board-list2";
 	}
 }
