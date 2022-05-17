@@ -12,19 +12,18 @@
 	<div id="container">
 		<div class="board-list">
 			<table class="board-list-table">
-				<tr>
-					<th>번호</th>
-					<th>제목</th>
-					<th>작성자</th>
-					<th>조회수</th>
-				</tr>
+				<thead>
+					<tr>
+						<th>번호</th>
+						<th>제목</th>
+						<th>작성자</th>
+						<th>조회수</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
 				
-				<tr class="board-items">
-					<td>번호</td>
-					<td>제목</td>
-					<td>작성자</td>
-					<td>조회수</td>
-				</tr>
 			</table>
 		</div>
 		<div class="board-list-page">
