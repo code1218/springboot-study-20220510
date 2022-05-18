@@ -16,8 +16,9 @@ function test(data){
 	});
 }
 
-test(50)
-.then(testData => {alert(testData)})
+test(500)
+.then(testData => testData + 100)
+.then(testData2 => alert(testData2))
 .catch(error => {console.log(error)});
 
 
@@ -25,7 +26,7 @@ test(50)
 submitBtn.onclick = () => {
 	submit();
 }
-
+/*
 function submit(){
 	$.ajax({
 		type: "post",
@@ -48,7 +49,7 @@ function submit(){
 		}
 	});
 }
-
+*/
 
 function submit(){
 	let url = "/board";
@@ -67,14 +68,15 @@ function submit(){
 	
 	fetch(url, option)
 	.then(response => {
+		console.log(response);
 		if(response.ok){
 			return response.json();
 		}else{
-			throw new Error(response.json());
+			throw new Error("정상적인 데이터를 응답받지 못했습니다.");
 		}
 	})
-	.then(data => {location.href = "/board/dtl/" + data.data;})
-	.catch(error => console.log(error));
+	.then(data => {/*location.href = "/board/dtl/" + data.data;*/})
+	ㅍ
 }
 
 

@@ -39,7 +39,7 @@ public class BoardController {
 	@PostMapping("/board")
 	public ResponseEntity<?> createBoard(@Valid @RequestBody BoardInsertReqDto boardInsertReqDto, BindingResult bindingResult) throws Exception {
 		int boardCode = boardService.createBoard(boardInsertReqDto);
-		return new ResponseEntity<>(new CMRespDto<Integer>(1, "게시글 작성 완료", boardCode), HttpStatus.OK);
+		return new ResponseEntity<>(new CMRespDto<Integer>(1, "게시글 작성 완료", boardCode), HttpStatus.BAD_REQUEST);
 	}
 	
 	@GetMapping("/board/{boardCode}")

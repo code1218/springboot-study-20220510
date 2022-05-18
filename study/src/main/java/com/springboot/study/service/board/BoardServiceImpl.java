@@ -23,6 +23,7 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public List<BoardRespDto> getBoardListAll() throws Exception {
 		List<BoardRespDto> boardRespDtos = new ArrayList<BoardRespDto>();
+		boardRespDtos.size();
 		
 		List<Map<String, Object>> boardListAll = boardRepository.getBoardListAll();
 		for(Map<String, Object> boardMap : boardListAll) {
@@ -43,6 +44,7 @@ public class BoardServiceImpl implements BoardService {
 		List<BoardRespDto> boardRespDtos = new ArrayList<BoardRespDto>();
 		
 		List<Map<String, Object>> boardListAll = boardRepository.getBoardListByPage((page - 1) * 5);
+		System.out.println(boardListAll);
 		for(Map<String, Object> boardMap : boardListAll) {
 			boardRespDtos.add(BoardRespDto.builder()
 					.boardCode((Integer) (boardMap.get("board_code")))
@@ -51,6 +53,7 @@ public class BoardServiceImpl implements BoardService {
 					.usercode((Integer) (boardMap.get("board_writer")))
 					.username((String) (boardMap.get("board_username")))
 					.boardCount((Integer) (boardMap.get("board_count")))
+					.boardCountAll((Long) (boardMap.get("board_count_all")))
 					.build());
 		}
 		return boardRespDtos;
