@@ -13,6 +13,8 @@ function load() {
 	$.ajax({
 		type: "get",
 		url: `/board/${boardCode}`,
+		data: JSON.stringify(),
+		contentType: "application/json",
 		dataType: "text",
 		success: function(data){
 			let boardObj = JSON.parse(data);
