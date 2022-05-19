@@ -52,7 +52,7 @@ public class BoardController {
 	
 	@PutMapping("/board/{boardCode}")
 	public ResponseEntity<?> updateBoard(@PathVariable int boardCode, 
-			@Valid BoardUpdateReqDto boardUpdateReqDto, BindingResult bindingResult) throws Exception {
+			@Valid @RequestBody BoardUpdateReqDto boardUpdateReqDto, BindingResult bindingResult) throws Exception {
 		int resultBoardCode = boardService.updateBoard(boardCode, boardUpdateReqDto);
 		return new ResponseEntity<>(new CMRespDto<Integer>(1, "게시글 수정 성공", resultBoardCode), HttpStatus.OK);
 	}

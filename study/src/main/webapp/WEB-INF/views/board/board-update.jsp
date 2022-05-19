@@ -25,7 +25,7 @@
 					<td><textarea class="textarea-item"></textarea></td>
 				</tr>
 			</table>
-			<button type="button" class="submit-btn">작성하기</button>
+			<button type="button" class="submit-btn">수정하기</button>
 		</div>
 		
 	</div>
