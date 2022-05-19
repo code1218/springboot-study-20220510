@@ -31,5 +31,11 @@ td {
 	width: 400px;
 }
 
+.option-buttons {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 10px;
+	width: 50%;
+}
 
 

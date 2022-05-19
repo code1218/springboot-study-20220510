@@ -5,7 +5,7 @@ const textareaItem = document.querySelector(".textarea-item");
 /*
 	Promise
 */
-
+/*
 function test(data){
 	return new Promise((resolve, reject) => {
 		if(data > 100){
@@ -19,7 +19,7 @@ function test(data){
 test(500)
 .then(testData => testData + 100)
 .then(testData2 => alert(testData2))
-.catch(error => {console.log(error)});
+.catch(error => {console.log(error)});*/
 
 
 
