@@ -26,7 +26,7 @@
 				
 			</table>
 		</div>
-		<button onclick="location.href='/board/create'">작성</button>
+		<button onclick="location.href='/board'">작성</button>
 		<div class="board-page-buttons">
 			<div class="pre-next-btn">&lt;</div>
 			<div class="board-list-page">

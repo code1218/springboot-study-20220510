@@ -3,6 +3,8 @@
  */
  
 const boardListTable = document.querySelector('.board-list-table');
+const updateBtn = document.querySelector('.update-btn');
+const deleteBtn = document.querySelector('.delete-btn');
 
 let path = window.location.pathname;
 
@@ -12,7 +14,7 @@ function load() {
 	let boardCode = path.substring(path.lastIndexOf("/") + 1);
 	$.ajax({
 		type: "get",
-		url: `/board/${boardCode}`,
+		url: `/api/board/${boardCode}`,
 		data: JSON.stringify(),
 		contentType: "application/json",
 		dataType: "text",

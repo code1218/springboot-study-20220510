@@ -13,7 +13,7 @@ let nowPage = 1;
 load(nowPage);
 
 function load(page) {
-	let url = `/board/list?page=${page}`;
+	let url = `/api/board/list?page=${page}`;
 	
 	fetch(url)
 	.then(response => {
@@ -121,7 +121,7 @@ function getBoardItems(){
 	const boardItems = document.querySelectorAll('.board-items');
 	for(let i = 0; i < boardItems.length; i++){
 		boardItems[i].onclick = () => {
-			location.href = "/board/dtl/" + boardItems[i].querySelectorAll('td')[0].textContent;
+			location.href = "/board-info/" + boardItems[i].querySelectorAll('td')[0].textContent;
 		}
 	}
 }
