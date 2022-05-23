@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import com.springboot.study.filter.TestFilter1;
 import com.springboot.study.filter.TestFilter2;
 
-@Configuration
+//@Configuration
 public class FilterConfig {
 	
 	@Bean
