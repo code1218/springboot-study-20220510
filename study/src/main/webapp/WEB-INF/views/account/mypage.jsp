@@ -10,13 +10,13 @@
 </head>
 <body>
 	<div id="container">
-			<form action="">
+			<form action="" enctype="multipart/form-data">
 				<div class="user-info">
 					<div class="profile-img">
-						<img src="https://lh3.googleusercontent.com/a-/AOh14Gh8mK68cwbv6GeR6Vnu-QfLuT86KsG9vS4X4Qoz8A=s96-c">
+						<img class="profile-img-url" src="https://lh3.googleusercontent.com/a-/AOh14Gh8mK68cwbv6GeR6Vnu-QfLuT86KsG9vS4X4Qoz8A=s96-c">
 					</div>
 					<div class="username-text">username</div>
-					<input type="file" name="file">
+					<input type="file" class="file-input" name="file">
 				</div>
 			</form>
 			
@@ -31,5 +31,20 @@
 			</div>
 			<button>수정하기</button>
 	</div>
+	<script type="text/javascript" src="/js/authentication/principal.js"></script>
+	<script type="text/javascript" src="/js/account/mypage.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
