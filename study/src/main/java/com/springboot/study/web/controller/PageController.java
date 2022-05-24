@@ -27,6 +27,13 @@ public class PageController {
 		return "auth/signin";
 	}
 	
+	@GetMapping("/user/account/mypage")
+	public String mypage() {
+		return "account/mypage";
+	}
+	
+	
+	
 	@GetMapping("/board/list")
 	public String boardList() {
 		return "board/board-list";
