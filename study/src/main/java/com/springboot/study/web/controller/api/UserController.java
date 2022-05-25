@@ -64,7 +64,16 @@ public class UserController {
 	
 	@PutMapping("/account/profile/img")
 	public ResponseEntity<?> updateProfileImg(@RequestPart MultipartFile file, @AuthenticationPrincipal PrincipalDetails principalDetails){
-		accountService.updateProfileImg(file, principalDetails);
+		if(accountService.updateProfileImg(file, principalDetails)) {
+			return new ResponseEntity<>(HttpStatus.OK);			
+		}else {
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);		
+		}
+	}
+	
+	@PutMapping("/account/profile")
+	public ResponseEntity<?> updateProfile(){
+		
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	

@@ -23,9 +23,11 @@
 	
 	<select id="findUserByUsername" parameterType="String" resultType="com.springboot.study.domain.user.User">
 		select
-			*
+			um.*,
+			ud.profile_img_url
 		from
-			user_mst
+			user_mst um
+			left outer join user_dtl ud on(ud.user_code = um.user_code)
 		where
 			username = #{username};
 	
@@ -33,9 +35,11 @@
 	
 	<select id="findOAuth2UserByOAuth2Username" parameterType="String" resultType="com.springboot.study.domain.user.User">
 		select
-			*
+			um.*,
+			ud.profile_img_url
 		from
-			user_mst
+			user_mst um
+			left outer join user_dtl ud on(ud.user_code = um.user_code)
 		where
 			oauth2_username = #{oAuth2Username};
 	

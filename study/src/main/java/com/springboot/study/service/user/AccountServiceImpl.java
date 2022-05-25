@@ -29,7 +29,6 @@ public class AccountServiceImpl implements AccountService{
 	@Override
 	public boolean updateProfileImg(MultipartFile file, PrincipalDetails principalDetails) {
 		if(file != null) {
-			System.out.println("여기호출?");
 			String originalFileName = file.getOriginalFilename();
 			String tempFileName = UUID.randomUUID().toString().replaceAll("-", "") + "_" + originalFileName;
 			Path uploadPath = Paths.get(filePath, "profile/" + tempFileName);
@@ -38,8 +37,6 @@ public class AccountServiceImpl implements AccountService{
 			if(!f.exists()) {
 				f.mkdirs();
 			}
-			
-			System.out.println(uploadPath);
 			
 			try {
 				Files.write(uploadPath, file.getBytes());

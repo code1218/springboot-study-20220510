@@ -81,6 +81,7 @@ public class AuthConroller {
 		System.out.println(principalDetails.getUser().getUser_code());
 		String password = principalDetails.getUser().getPassword();
 		System.out.println(bCryptPasswordEncoder.matches("1234", password));
+		System.out.println("principal::: " + principalDetails);
 		
 		return new ResponseEntity<>(new CMRespDto<PrincipalDetails>(1, "세션정보", principalDetails), HttpStatus.OK);
 	}
