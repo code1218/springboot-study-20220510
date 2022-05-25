@@ -53,7 +53,8 @@ mybatis:
   mapper-locations:
   - /mappers/*.xml
     
-    
+file:
+  path: C:/junil/junil/workspace/git/springboot-study/upload/
     
     
     

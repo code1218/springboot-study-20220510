@@ -40,6 +40,16 @@
 			oauth2_username = #{oAuth2Username};
 	
 	</select>
+	
+	<update id="updateProfileImg" parameterType="com.springboot.study.domain.user.User">
+		update
+			user_dtl
+		set
+			profile_img_url = #{profile_img_url}
+		where
+			user_code = #{user_code}
+	
+	</update>
 </mapper>
 
 

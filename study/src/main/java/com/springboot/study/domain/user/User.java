@@ -23,6 +23,8 @@ public class User {
 	private String roles; //ROLE_USER,ROLE_MANAGER,ROLE_ADMIN
 	private String provider;
 	
+	private String profile_img_url;
+	
 	public List<String> getRoleList(){
 		if(this.roles.length() > 0) {
 			//String[] r = {"ROLE_USER", "ROLE_MANAGER", "ROLE_ADMIN"};
