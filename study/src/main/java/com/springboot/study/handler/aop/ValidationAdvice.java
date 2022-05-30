@@ -34,7 +34,8 @@ public class ValidationAdvice {
 	
 	private final Logger LOGGER = LoggerFactory.getLogger(ValidationAdvice.class);
 	
-	@Around("execution(* com.springboot.study.web.controller.api.*Controller.*(..))")
+//	@Around("execution(* com.springboot.study.web.controller.api.*Controller.*(..))")
+	@Around("execution(* com.springboot.study.test.*Controller.*(..))")
 	public Object apiAdvice(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
 		Object[] args = proceedingJoinPoint.getArgs();
 		for(Object arg : args) {

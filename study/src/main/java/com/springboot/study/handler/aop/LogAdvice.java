@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 public class LogAdvice {
 	private static final Logger LOGGER = LoggerFactory.getLogger(LogAdvice.class);
 	
-	@Around("within(com.springboot.study..*)")
+	@Around("within(com.springboot.study.test..*)")
 	public Object logging(ProceedingJoinPoint pjp) throws Throwable {
 		long startAt = System.currentTimeMillis();
 		
