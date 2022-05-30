@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.springboot.study.annotation.Validation;
 import com.springboot.study.config.auth.PrincipalDetails;
 import com.springboot.study.domain.user.User;
 import com.springboot.study.domain.user.UserRepository;
@@ -53,6 +54,7 @@ public class AuthConroller {
 		return new ResponseEntity<>(cmRespDto, status);
 	}
 	
+	@Validation
 	@PostMapping("/auth/signup")
 	public ResponseEntity<?> signup(@Valid SignupReqDto signupReqDto, BindingResult bindingResult) {
 		
